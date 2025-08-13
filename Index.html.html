@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietinBank eFAST - Tình Yêu Thì Enchanted, Chuyển Tiền Thì eFAST</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.vietinbank.vn/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #0c0a1e; /* Dark blue-purple background */
+            color: #e0e0e0;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #bgVideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(12, 10, 30, 1) 0%, rgba(12, 10, 30, 0.6) 50%, rgba(12, 10, 30, 1) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.4), 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.6), 0 0 25px rgba(139, 92, 246, 0.6);
+        }
+        
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(236, 72, 153, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- QUAN TRỌNG: Thay thế 'path/to/your/video.mp4' bằng đường dẫn video của bạn -->
+        <!-- Video nền lấy từ file `export_1755060963110.mov` bạn đã tải lên -->
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="https://storage.googleapis.com/gemini-prod-us-west1-assets/user-project-unstructured/20240813T052327Z_export_1755060963110.mov" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
+                Tình yêu thì <span class="gradient-text">Enchanted</span>,
+            </h1>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
+                Chuyển tiền thì <span class="gradient-text">eFAST</span>.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Có những trải nghiệm khiến ta "say đắm" ngay từ lần đầu. VietinBank tin rằng, giao dịch tài chính cho doanh nghiệp cũng có thể "mê hoặc" đến thế.
+            </p>
+            <a href="#contact" class="cta-button bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg">
+                Khám Phá Ngay
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="bg-[#0c0a1e] py-20 sm:py-32">
+        <div class="container mx-auto px-6">
+
+            <!-- Section: "Enchanted" Experience -->
+            <section id="features" class="mb-20 sm:mb-32 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">eFAST - Vì Sao Doanh Nghiệp "Say Đắm"?</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">Trải nghiệm ngân hàng số không chỉ nhanh, mà còn phải thực sự thông minh và mượt mà đến mức khiến bạn phải "say đắm".</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card p-8 rounded-2xl">
+                        <div class="mb-4 text-pink-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">"Mê Hoặc" Bởi Tốc Độ</h3>
+                        <p class="text-gray-400">Mở tài khoản 100% online trong 5 phút. Chuyển tiền 24/7 chỉ trong chớp mắt. Nắm bắt mọi cơ hội kinh doanh mà không cần chờ đợi.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card p-8 rounded-2xl">
+                         <div class="mb-4 text-purple-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">"Say Đắm" Sự Tinh Gọn</h3>
+                        <p class="text-gray-400">Quản lý toàn bộ tài chính doanh nghiệp chỉ với vài cú lướt chạm. Giải phóng thời gian để bạn tập trung vào điều quan trọng nhất.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card p-8 rounded-2xl">
+                        <div class="mb-4 text-teal-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">"Yêu Thích" Vì Miễn Phí</h3>
+                        <p class="text-gray-400">Trải nghiệm chính sách miễn phí toàn diện: phí chuyển tiền, duy trì, chi lương... Tối ưu chi phí để tối đa hóa lợi nhuận.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Visual Features -->
+            <section class="mb-20 sm:mb-32">
+                 <!-- Image 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold mb-4 text-white">Mở Tài Khoản eKYC Siêu Tốc</h3>
+                        <p class="text-lg text-gray-400 mb-6">Không cần đến ngân hàng, không cần chờ đợi. Định danh điện tử (eKYC) ngay trên ứng dụng, có ngay tài khoản thanh toán để sử dụng sau 5 phút.</p>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-pink-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 100% Online, không cần giấy tờ phức tạp.</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-pink-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Bảo mật đa lớp, an toàn tuyệt đối.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <!-- QUAN TRỌNG: Thay thế src dưới đây bằng link ảnh của bạn -->
+                        <img src="https://placehold.co/600x600/1a1a2e/ffffff?text=H%C3%ACnh+%E1%BA%A3nh+eKYC" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x600/1a1a2e/ffffff?text=H%C3%ACnh+%E1%BA%A3nh+eKYC';" 
+                             alt="Mở tài khoản eKYC dành cho KHDN" class="rounded-2xl shadow-2xl shadow-purple-500/20">
+                    </div>
+                </div>
+                
+                 <!-- Image 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold mb-4 text-white">Trọn Bộ Ưu Đãi - Vận Hành Tối Ưu</h3>
+                        <p class="text-lg text-gray-400 mb-6">Đăng ký gói tài khoản thanh toán trực tuyến và tận hưởng ưu đãi miễn phí lên đến 12 tháng, giúp doanh nghiệp bạn tiết kiệm chi phí và vận hành hiệu quả.</p>
+                         <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-pink-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Miễn phí duy trì, chuyển tiền, chi lương.</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-pink-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Miễn phí nộp Ngân sách nhà nước.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <!-- QUAN TRỌNG: Thay thế src dưới đây bằng link ảnh của bạn -->
+                        <img src="https://placehold.co/600x600/1a1a2e/ffffff?text=H%C3%ACnh+%E1%BA%A3nh+%C6%B0u+%C4%91%C3%A3i" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x600/1a1a2e/ffffff?text=H%C3%ACnh+%E1%BA%A3nh+%C6%B0u+%C4%91%C3%A3i';" 
+                             alt="Ưu đãi và tính năng của VietinBank eFAST" class="rounded-2xl shadow-2xl shadow-pink-500/20">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sẵn Sàng Để Được "Mê Hoặc"?</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">Tình yêu có thể cần thời gian, nhưng doanh nghiệp của bạn thì không. Liên hệ ngay để được hỗ trợ nhanh nhất.</p>
+
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Contact Info -->
+                    <div class="feature-card p-8 rounded-2xl text-left">
+                        <h3 class="text-2xl font-bold text-white mb-6">Thông Tin Hỗ Trợ Trực Tiếp</h3>
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/80x80/8b5cf6/ffffff?text=H" alt="Avatar Hạnh Nguyễn" class="rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-xl text-white">Hạnh Nguyễn</p>
+                                <p class="text-gray-400">Chuyên viên QHKH Doanh nghiệp</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-lg"><span class="font-semibold text-gray-300">Mã nhân viên:</span> <span class="font-bold text-white">hanhnth13</span></p>
+                            <a href="tel:0858310426" class="block text-lg group">
+                                <span class="font-semibold text-gray-300">Điện thoại / Zalo:</span> 
+                                <span class="font-bold text-white group-hover:text-pink-400 transition-colors">0858 310 426</span>
+                            </a>
+                             <a href="mailto:hanhnth13@vietinbank.vn" class="block text-lg group">
+                                <span class="font-semibold text-gray-300">Email:</span> 
+                                <span class="font-bold text-white group-hover:text-pink-400 transition-colors">hanhnth13@vietinbank.vn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- QR Codes -->
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-4">Quét mã để tải ứng dụng</h3>
+                        <div class="flex justify-center gap-4">
+                            <div class="p-2 bg-white rounded-lg">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://apps.apple.com/vn/app/vietinbank-efast/id1533556564" alt="QR Code App Store" class="w-32 h-32 md:w-40 md:h-40">
+                                <p class="text-sm font-bold text-gray-800 mt-2">App Store</p>
+                            </div>
+                            <div class="p-2 bg-white rounded-lg">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.vietinbank.efast" alt="QR Code Google Play" class="w-32 h-32 md:w-40 md:h-40">
+                                <p class="text-sm font-bold text-gray-800 mt-2">Google Play</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#070617] py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 VietinBank. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Trang web này được tạo với mục đích giới thiệu sản phẩm VietinBank eFAST.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
